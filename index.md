@@ -1,5 +1,8 @@
 # laOpenData
 
+[![CRANstatus](https://www.r-pkg.org/badges/version/nycOpenData)](https://CRAN.R-project.org/package=laOpenData)
+[![CRANdownloads](https://cranlogs.r-pkg.org/badges/grand-total/nycOpenData?color=blue)](https://r-pkg.org/pkg/laOpenData)
+
 `laOpenData` provides simple, reproducible access to Los Angeles-related
 datasets from the  
 [Los Angeles Open Data Portal](https://data.lacity.org/) platform —
@@ -7,7 +10,7 @@ directly from R, with **no API keys** or manual downloads required.
 Working directly with Socrata APIs can be cumbersome — `laOpenData`
 simplifies this process into a clean, reproducible workflow.
 
-Version **0.1.0** introduces a streamlined, catalog-driven interface for
+Version **0.1.1** introduces a streamlined, catalog-driven interface for
 Los Angeles Open Data, extending the open data ecosystem beyond New York
 to support cross-city analysis and comparative civic research.
 
@@ -51,6 +54,7 @@ via
 ### Development version (GitHub)
 
 ``` r
+
 devtools::install_github("martinezc1/laOpenData")
 ```
 
@@ -59,25 +63,27 @@ devtools::install_github("martinezc1/laOpenData")
 ## Example
 
 ``` r
+
 library(laOpenData)
 
 la_vacent_buildings <- la_pull_dataset(
-  dataset = "building_and_safety_vacant_building_abatement",
+  dataset = "building_safety",
   limit = 1000
 )
 
 head(la_vacent_buildings)
 #> # A tibble: 6 × 10
-#>   address         case_num    cd inspector_name area  building_type approved_use
-#>   <chr>              <dbl> <dbl> <chr>          <chr> <chr>         <chr>       
-#> 1 749 S KOHLER ST  1045424    14 LUCIANO GAUNA  II    III           COMMERCIAL  
-#> 2 11354 W RUNNYM…  1044681     2 GLEN RAND      I     *****         <NA>        
-#> 3 1346 W 5TH ST     924823     1 LUCIANO GAUNA  II    *****         COMMERCIAL  
-#> 4 11354 W RUNNYM…  1044681     2 GLEN RAND      I     *****         <NA>        
-#> 5 11354 W RUNNYM…  1044681     2 GLEN RAND      I     *****         <NA>        
-#> 6 2219 S CENTRAL…  1026127     9 LUCIANO GAUNA  II    *****         <NA>        
-#> # ℹ 3 more variables: assigned_to <chr>, building_size <chr>,
-#> #   abate_effective <dttm>
+#>     case area_planning_commiss…¹ case_type year_case_created date_case_created  
+#>    <dbl> <chr>                   <chr>                 <dbl> <dttm>             
+#> 1 800237 Harbor                  GENERAL                2018 2018-01-02 00:00:00
+#> 2 800342 West Los Angeles        GENERAL                2018 2018-01-02 00:00:00
+#> 3 800312 Central                 GENERAL                2018 2018-01-02 00:00:00
+#> 4 800344 Central                 FRP                    2018 2018-01-02 00:00:00
+#> 5 800341 Central                 GENERAL                2018 2018-01-02 00:00:00
+#> 6 800343 Central                 FRP                    2018 2018-01-02 00:00:00
+#> # ℹ abbreviated name: ¹​area_planning_commission
+#> # ℹ 5 more variables: date_case_closed <dttm>, csr <dbl>,
+#> #   csr_problem_description <chr>, latitude <dbl>, longitude <dbl>
 ```
 
 ## About

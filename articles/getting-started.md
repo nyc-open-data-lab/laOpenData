@@ -1,6 +1,7 @@
 # Getting Started with laOpenData
 
 ``` r
+
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 library(laOpenData)
 library(ggplot2)
@@ -45,23 +46,24 @@ function. This provides information for thousands of datasets found on
 the portal.
 
 ``` r
+
 la_list_datasets() |> head()
 #> # A tibble: 6 × 96
 #>   key   id    name  attribution attributionLink category createdAt dataUpdatedAt
 #>   <chr> <chr> <chr> <chr>       <chr>           <chr>    <chr>     <chr>        
-#> 1 my_l… 2cy6… MyLA… City of Lo… https://myla31… City In… 2026-01-… 2026-04-13T0…
-#> 2 city… rwwd… City… Youth Deve… https://ydd.la… NA       2026-01-… 2026-01-09T2…
-#> 3 lahd… cr8f… LAHD… Los Angele… NA              Communi… 2025-11-… 2025-12-29T1…
-#> 4 x202… mt59… 2025… NA          NA              Housing… 2025-09-… 2026-01-27T2…
-#> 5 lahd… ci3m… LAHD… NA          NA              Communi… 2025-09-… 2025-09-11T1…
-#> 6 lahd… n9x9… LAHD… Los Angele… NA              Communi… 2025-09-… 2025-09-11T2…
+#> 1 buil… dqq4… Buil… TSB         NA              Public … 2026-09-… 2026-09-29T1…
+#> 2 buil… ke3z… Buil… TSB         NA              Public … 2026-08-… 2026-09-29T1…
+#> 3 x202… hiwe… 2025… NA          NA              Transpo… 2026-07-… 2026-08-18T1…
+#> 4 idle… g268… Idle… NA          NA              Audits … 2026-06-… 2026-06-24T2…
+#> 5 buil… 9i2j… Buil… TSB         NA              City In… 2026-05-… 2026-09-27T0…
+#> 6 x202… 5ypd… 2026… NA          NA              Communi… 2026-05-… 2026-07-13T1…
 #> # ℹ 88 more variables: dataUri <chr>, description <chr>, domain <chr>,
 #> #   externalId <lgl>, hideFromCatalog <lgl>, hideFromDataJson <lgl>,
 #> #   license <chr>, metadataUpdatedAt <chr>, provenance <chr>, updatedAt <chr>,
 #> #   webUri <chr>, approvals <list>, tags <list>,
 #> #   `customFields.Committed Update Frequency.Refresh rate` <chr>,
-#> #   `customFields.Location Specified.Does this data have a Location column? (Yes or No)` <chr>,
-#> #   `customFields.Location Specified.What geographic unit is the data collected?` <chr>, …
+#> #   `customFields.Automated?.Automated?` <chr>,
+#> #   `customFields.Location Specified.Does this data have a Location column? (Yes or No)` <chr>, …
 ```
 
 The output includes columns such as the dataset title, description, and
@@ -77,11 +79,12 @@ For instance, if we want to pull the dataset
 the methods below:
 
 ``` r
-la_building_safety_vacant <- la_pull_dataset(
-  dataset = "q3ak-s5hy", limit = 2, timeout_sec = 90)
 
-la_building_safety_vacant <- la_pull_dataset(
-  dataset = "building_and_safety_vacant_building_abatement", limit = 2, timeout_sec = 90)
+la_building_safety <- la_pull_dataset(
+  dataset = "i4em-afmq", limit = 2, timeout_sec = 90)
+
+la_building_safety <- la_pull_dataset(
+  dataset = "building_safety", limit = 2, timeout_sec = 90)
 ```
 
 No matter if we put the `id` or the `key` as the value for `dataset =`,
@@ -160,17 +163,16 @@ called “city” which we can use to accomplish this.
 
 ``` r
 
+
 la_businesses <- la_pull_dataset(dataset = "6rrh-rzua",limit = 3, timeout_sec = 90, filters = list(city = "LOS ANGELES"))
 la_businesses
-#> # A tibble: 3 × 16
-#>   location_account  business_name              street_address     city  zip_code
-#>   <chr>             <chr>                      <chr>              <chr> <chr>   
-#> 1 0003301266-0001-1 WEST OF HOLLYWOOD, INC.    2608 AIKEN AVENUE  LOS … 90064-3…
-#> 2 0002772430-0001-9 GISELLE LUZA STUDIO, LLC   5500 HOLLYWOOD BL… LOS … 90028-6…
-#> 3 0002173704-0001-5 ATLANTIC RECOVERY SERVICES 5306 N FIGUEROA S… LOS … 90042-4…
-#> # ℹ 11 more variables: location_description <chr>, mailing_address <chr>,
-#> #   mailing_city <chr>, mailing_zip_code <chr>, naics <dbl>,
-#> #   primary_naics_description <chr>, council_district <dbl>,
+#> # A tibble: 3 × 11
+#>   location_account  business_name                  street_address city  zip_code
+#>   <chr>             <chr>                          <chr>          <chr> <chr>   
+#> 1 0002829017-0001-5 RICHARD JOHN SHERMAN           2010 LA BREA … LOS … 90046-2…
+#> 2 0000111620-0001-4 SOUTHERN CALIFORNIA GRANTMAKE… 1000 N ALAMED… LOS … 90012-1…
+#> 3 0003293756-0001-5 BHI RESIDENTIAL LONG TERM COR… 732 S SPRING … LOS … 90014-3…
+#> # ℹ 6 more variables: location_description <chr>, council_district <dbl>,
 #> #   location_start_date <dttm>, location_1_latitude <dbl>,
 #> #   location_1_longitude <dbl>, location_1_human_address <chr>
 
@@ -194,6 +196,7 @@ get a dataset of *50* businesses that occur in LOS ANGELES in council
 district 8.
 
 ``` r
+
 # Creating the dataset
 la_businesses_8 <- la_pull_dataset(dataset = "6rrh-rzua", limit = 50, timeout_sec = 90, filters = list(city = "LOS ANGELES", council_district = 8))
 
@@ -201,18 +204,18 @@ la_businesses_8 <- la_pull_dataset(dataset = "6rrh-rzua", limit = 50, timeout_se
 la_businesses_8 |>
   slice_head(n = 6)
 #> # A tibble: 6 × 17
-#>   location_account  business_name                 street_address  city  zip_code
-#>   <chr>             <chr>                         <chr>           <chr> <chr>   
-#> 1 0002810621-0001-9 NANCY'S CLEANING SERVICES     1742 W 64TH ST… LOS … 90047-1…
-#> 2 0003318926-0001-1 RINKA SHIRAISHI               4214 W 62ND ST… LOS … 90043-3…
-#> 3 0002824469-0001-9 JOSE CRUZ                     3114 W 59TH ST… LOS … 90043-3…
-#> 4 0003170618-0001-1 BULLHEAD CITY INN CORPORATION 10918 S FIGUER… LOS … 90061-1…
-#> 5 0002859001-0001-3 ASIA HAMILTON                 8953 RUTHELEN … LOS … 90047-3…
-#> 6 0002482305-0001-2 LISA M NIXON                  6106 KENISTON … LOS … 90043-3…
-#> # ℹ 12 more variables: location_description <chr>, mailing_address <chr>,
-#> #   mailing_city <chr>, mailing_zip_code <chr>, council_district <dbl>,
-#> #   location_start_date <dttm>, dba_name <chr>, naics <dbl>,
-#> #   primary_naics_description <chr>, location_1_latitude <dbl>,
+#>   location_account  business_name         dba_name street_address city  zip_code
+#>   <chr>             <chr>                 <chr>    <chr>          <chr> <chr>   
+#> 1 0000688586-0001-8 G & P RECYCLING INC   G & P R… 1329 W JEFFER… LOS … 90007-3…
+#> 2 0000609648-0002-5 LARRY & DARNELLA SCA… L AND D… 6715 2ND AVEN… LOS … 90043-4…
+#> 3 0002865522-0001-3 DOLORES G AMAYA       NA       1601 W 46TH S… LOS … 90062-1…
+#> 4 0002983638-0001-6 ANTHONY CANTERO       THE MEN… 4427 S NORMAN… LOS … 90037-2…
+#> 5 0002109702-0001-5 FRANCISCO DIAZ        NA       1228 W 25TH S… LOS … 90007-1…
+#> 6 0002277536-0001-3 SAUNDRA BISHOP TRUST  NA       627 W IMPERIA… LOS … 90044-4…
+#> # ℹ 11 more variables: location_description <chr>, mailing_address <chr>,
+#> #   mailing_city <chr>, mailing_zip_code <chr>, naics <dbl>,
+#> #   primary_naics_description <chr>, council_district <dbl>,
+#> #   location_start_date <dttm>, location_1_latitude <dbl>,
 #> #   location_1_longitude <dbl>, location_1_human_address <chr>
 
 # Quick check to make sure our filtering worked
@@ -250,6 +253,7 @@ figure out what are the main types of businesses
 To do this, we will create a bar graph of the business types.
 
 ``` r
+
 # Visualizing the distribution, ordered by frequency
 la_businesses_8 |>
   count(primary_naics_description) |>

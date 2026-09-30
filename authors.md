@@ -9,16 +9,16 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/martinezc1/laOpenData/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/nyc-open-data-lab/laOpenData/blob/main/DESCRIPTION)
 
 Martinez C (2026). *laOpenData: Convenient Access to Los Angeles Open
-Data API Endpoints*. R package version 0.1.0,
-<https://martinezc1.github.io/laOpenData/>.
+Data API Endpoints*. R package version 0.1.1,
+<https://nyc-open-data-lab.github.io/laOpenData/>.
 
     @Manual{,
       title = {laOpenData: Convenient Access to Los Angeles Open Data API Endpoints},
       author = {Christian Martinez},
       year = {2026},
-      note = {R package version 0.1.0},
-      url = {https://martinezc1.github.io/laOpenData/},
+      note = {R package version 0.1.1},
+      url = {https://nyc-open-data-lab.github.io/laOpenData/},
     }
