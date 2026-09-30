@@ -109,8 +109,8 @@ thousands of datasets found on the portal.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 96</span></span></span>
 <span><span class="co">#&gt;   key   id    name  attribution attributionLink category createdAt dataUpdatedAt</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> buil… dqq4… Buil… TSB         <span style="color: #BB0000;">NA</span>              Public … 2026-09-… 2026-09-29T1…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> buil… ke3z… Buil… TSB         <span style="color: #BB0000;">NA</span>              Public … 2026-08-… 2026-09-29T1…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> buil… dqq4… Buil… TSB         <span style="color: #BB0000;">NA</span>              Public … 2026-09-… 2026-09-30T1…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> buil… ke3z… Buil… TSB         <span style="color: #BB0000;">NA</span>              Public … 2026-08-… 2026-09-30T1…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> x202… hiwe… 2025… <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>              Transpo… 2026-07-… 2026-08-18T1…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> idle… g268… Idle… <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>              Audits … 2026-06-… 2026-06-24T2…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> buil… 9i2j… Buil… TSB         <span style="color: #BB0000;">NA</span>              City In… 2026-05-… 2026-09-27T0…</span></span>
@@ -234,18 +234,18 @@ council district 8.</p>
 <span><span class="va">la_businesses_8</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 17</span></span></span>
-<span><span class="co">#&gt;   location_account  business_name         dba_name street_address city  zip_code</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> 0000688586-0001-8 G &amp; P RECYCLING INC   G &amp; P R… 1329 W JEFFER… LOS … 90007-3…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> 0000609648-0002-5 LARRY &amp; DARNELLA SCA… L AND D… 6715 2ND AVEN… LOS … 90043-4…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> 0002865522-0001-3 DOLORES G AMAYA       <span style="color: #BB0000;">NA</span>       1601 W 46TH S… LOS … 90062-1…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> 0002983638-0001-6 ANTHONY CANTERO       THE MEN… 4427 S NORMAN… LOS … 90037-2…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> 0002109702-0001-5 FRANCISCO DIAZ        <span style="color: #BB0000;">NA</span>       1228 W 25TH S… LOS … 90007-1…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> 0002277536-0001-3 SAUNDRA BISHOP TRUST  <span style="color: #BB0000;">NA</span>       627 W IMPERIA… LOS … 90044-4…</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 11 more variables: location_description &lt;chr&gt;, mailing_address &lt;chr&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   mailing_city &lt;chr&gt;, mailing_zip_code &lt;chr&gt;, naics &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   primary_naics_description &lt;chr&gt;, council_district &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   location_start_date &lt;dttm&gt;, location_1_latitude &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt;   location_account  business_name             street_address      city  zip_code</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> 0002810621-0001-9 NANCY'S CLEANING SERVICES 1742 W 64TH STREET  LOS … 90047-1…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> 0003318926-0001-1 RINKA SHIRAISHI           4214 W 62ND STREET  LOS … 90043-3…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> 0002824469-0001-9 JOSE CRUZ                 3114 W 59TH STREET  LOS … 90043-3…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> 0002859001-0001-3 ASIA HAMILTON             8953 RUTHELEN STRE… LOS … 90047-3…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> 0002482305-0001-2 LISA M NIXON              6106 KENISTON AVEN… LOS … 90043-3…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> 0002870844-0001-4 EVELYN CASTANEDA          811 E 109TH PLACE   LOS … 90059-1…</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 12 more variables: location_description &lt;chr&gt;, mailing_address &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   mailing_city &lt;chr&gt;, mailing_zip_code &lt;chr&gt;, council_district &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   location_start_date &lt;dttm&gt;, dba_name &lt;chr&gt;, naics &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   primary_naics_description &lt;chr&gt;, location_1_latitude &lt;dbl&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   location_1_longitude &lt;dbl&gt;, location_1_human_address &lt;chr&gt;</span></span></span>
 <span></span>
 <span><span class="co"># Quick check to make sure our filtering worked</span></span>
@@ -320,7 +320,7 @@ visualization.</p>
 <p>If you use this package for research or educational purposes, please
 cite it as follows:</p>
 <p>Martinez C (2026). laOpenData: Convenient Access to Los Angeles Open
-Data API Endpoints. R package version 0.1.0, <a href="https://martinezc1.github.io/laOpenData/" class="uri">https://martinezc1.github.io/laOpenData/</a>.</p>
+Data API Endpoints. R package version 0.1.0, <a href="https://nyc-open-data-lab.github.io/laOpenData/" class="external-link uri">https://nyc-open-data-lab.github.io/laOpenData/</a>.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
