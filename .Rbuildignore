@@ -34,3 +34,5 @@
 ^cran-comments\.md$
 ^laOpenData\.Rproj$
 ^README\.Rmd$
+^\.positai$
+^\.claude$

@@ -13,6 +13,9 @@ knitr::opts_chunk$set(
 
 # laOpenData
 
+[![CRANstatus](https://www.r-pkg.org/badges/version/nycOpenData)](https://CRAN.R-project.org/package=laOpenData)
+[![CRANdownloads](https://cranlogs.r-pkg.org/badges/grand-total/nycOpenData?color=blue)](https://r-pkg.org/pkg/laOpenData)
+
 `laOpenData` provides simple, reproducible access to Los Angeles-related
 datasets from the  
 [Los Angeles Open Data Portal](https://data.lacity.org/) platform — directly
@@ -20,7 +23,7 @@ from R, with **no API keys** or manual downloads required. Working directly with
 Socrata APIs can be cumbersome — `laOpenData` simplifies this process
 into a clean, reproducible workflow.
 
-Version **0.1.0** introduces a streamlined, catalog-driven interface for
+Version **0.1.1** introduces a streamlined, catalog-driven interface for
 Los Angeles Open Data, extending the open data ecosystem beyond New York to support 
 cross-city analysis and comparative civic research.
 
@@ -70,7 +73,7 @@ devtools::install_github("martinezc1/laOpenData")
 library(laOpenData)
 
 la_vacent_buildings <- la_pull_dataset(
-  dataset = "building_and_safety_vacant_building_abatement",
+  dataset = "building_safety",
   limit = 1000
 )
 

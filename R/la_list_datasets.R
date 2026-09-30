@@ -1,6 +1,6 @@
 #' List datasets available in laOpenData
 #'
-#' Retrieves the current Open NY catalog and returns datasets available
+#' Retrieves the current Open la catalog and returns datasets available
 #' for use with `la_pull_dataset()`.
 #'
 #' Keys are generated from dataset names using `janitor::make_clean_names()`.

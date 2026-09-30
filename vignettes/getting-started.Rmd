@@ -43,11 +43,11 @@ The output includes columns such as the dataset title, description, and link to 
 For instance, if we want to pull the dataset `Building and Safety - Vacant Building Abatement`, we can use either of the methods below:
 
 ```{r la-vacant-pull}
-la_building_safety_vacant <- la_pull_dataset(
-  dataset = "q3ak-s5hy", limit = 2, timeout_sec = 90)
+la_building_safety <- la_pull_dataset(
+  dataset = "i4em-afmq", limit = 2, timeout_sec = 90)
 
-la_building_safety_vacant <- la_pull_dataset(
-  dataset = "building_and_safety_vacant_building_abatement", limit = 2, timeout_sec = 90)
+la_building_safety <- la_pull_dataset(
+  dataset = "building_safety", limit = 2, timeout_sec = 90)
 ```
 
 No matter if we put the `id` or the `key` as the value for `dataset =`, we successfully get the data!
