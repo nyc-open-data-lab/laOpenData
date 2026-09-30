@@ -1,8 +1,8 @@
 
 # laOpenData
 
-[![CRANstatus](https://www.r-pkg.org/badges/version/nycOpenData)](https://CRAN.R-project.org/package=laOpenData)
-[![CRANdownloads](https://cranlogs.r-pkg.org/badges/grand-total/nycOpenData?color=blue)](https://r-pkg.org/pkg/laOpenData)
+[![CRANstatus](https://www.r-pkg.org/badges/version/laOpenData)](https://CRAN.R-project.org/package=laOpenData)
+[![CRANdownloads](https://cranlogs.r-pkg.org/badges/grand-total/laOpenData?color=blue)](https://r-pkg.org/pkg/laOpenData)
 
 `laOpenData` provides simple, reproducible access to Los Angeles-related
 datasets from the\
