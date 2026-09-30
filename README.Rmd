@@ -13,8 +13,8 @@ knitr::opts_chunk$set(
 
 # laOpenData
 
-[![CRANstatus](https://www.r-pkg.org/badges/version/nycOpenData)](https://CRAN.R-project.org/package=laOpenData)
-[![CRANdownloads](https://cranlogs.r-pkg.org/badges/grand-total/nycOpenData?color=blue)](https://r-pkg.org/pkg/laOpenData)
+[![CRANstatus](https://www.r-pkg.org/badges/version/laOpenData)](https://CRAN.R-project.org/package=laOpenData)
+[![CRANdownloads](https://cranlogs.r-pkg.org/badges/grand-total/laOpenData?color=blue)](https://r-pkg.org/pkg/laOpenData)
 
 `laOpenData` provides simple, reproducible access to Los Angeles-related
 datasets from the  
@@ -101,7 +101,7 @@ package provides a general interface for any Socrata-backed portal,
 This package is part of a broader ecosystem of tools for working with
 open data:
 
-- `nycOpenData` — streamlined access to NYC Open Data  
+- `laOpenData` — streamlined access to la Open Data  
 - `nysOpenData` — streamlined access to NY State Open Data
 - `mtaOpenData` — streamlined access to MTA-related NY State Open Data
 - `chiOpenData` — streamlined access to Chicago-related City Open Data
