@@ -159,4 +159,4 @@ As demonstrated in this vignette, the package provides a seamless workflow for t
 
 If you use this package for research or educational purposes, please cite it as follows:
 
-Martinez C (2026). laOpenData: Convenient Access to Los Angeles Open Data API Endpoints. R package version 0.1.0, <https://martinezc1.github.io/laOpenData/>.
+Martinez C (2026). laOpenData: Convenient Access to Los Angeles Open Data API Endpoints. R package version 0.1.0, <https://nyc-open-data-lab.github.io/laOpenData/>.

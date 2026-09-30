@@ -50,7 +50,7 @@ All functions return clean **tibble** outputs and support filtering via\
 ### Development version (GitHub)
 
 ``` r
-devtools::install_github("martinezc1/laOpenData")
+devtools::install_github("nyc-open-data-lab/laOpenData")
 ```
 
 ------------------------------------------------------------------------
@@ -121,7 +121,7 @@ for working with civic data across jurisdictions.
 We welcome contributions! If you find a bug or would like to request a
 wrapper for a specific Los Angeles dataset, please open an issue or
 submit a pull request on
-[GitHub](https://github.com/martinezc1/laOpenData).
+[GitHub](https://github.com/nyc-open-data-lab/laOpenData).
 
 ------------------------------------------------------------------------
 
